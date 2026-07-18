@@ -2,8 +2,6 @@ c# language is used in game development, creating console application, and windo
 c# runs on .net frame work
 .net frame work is a open source developer platform
 it can run on lynix mac and windows 
-
-
 _______________________________________________________________________________________________________
 
 .net , .net framework , .net core
