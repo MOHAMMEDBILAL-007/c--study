@@ -12,26 +12,38 @@ ________________________________________________________________________________
 
 "Xamarin" is .net implementation for running apps on android and iOS
 
-"Mono" is is a cross-platform implementation for running applications for many mobile applications
+"Mono" is is a cross-platform implementation for running applications for many mobile os
 
 a library created on .net framework won't work in .net core so microsoft introduced ".net Standard" 
 so insted of targeting a specific implementation we could target for .net standard
 which checks for framework ,core ,xamarin
 _______________________________________________________________________________________________________
 .net framework
-it composed of 2 major components ie,
+it is composed of 2 major components ie,
 *common language runtime (CLR)
 	 it is the execution engine that handles running applications.It provides services
 	 like thread management, garbage collection, type-safety, exception handling, and more.
 *class library 
-	provides a set of APIs and types for common functionality. It provides types for strings,
+	provides a set of APIs and types of common functionality. It provides types for strings,
 	dates, numbers, etc. The Class Library includes APIs for reading and writing files,
 	connecting to databases, drawing, and more.
 
 .NET applications are written in the C#, F#, or Visual Basic programming language.
-Code is compiled into a language-agnostic Common Intermediate Language (CIL).
-Compiled code is stored in assemblies—files with a .dll or .exe file extension.
+Code is compiled(the c# compiler is Roslyn) into a language-agnostic Common Intermediate Language (CIL).
+Compiled code is stored in assemblies—files with a .dll or .exe file extension (actually the CIL + Metadata + small native bootstraps inside the files).
 
 When an app runs, the CLR takes the assembly and uses a just-in-time 
 compiler (JIT) to turn it into machine code that can execute on the 
 specific architecture of the computer it is running on.
+_______________________________________________________________________________________________________
+proper structure of how a c# program is executed
+		c#
+		↓
+is compiled to common intermediate language(cil) using c# compiler Roslyn
+		↓
+then stored in assemblies—files in .dll or .exe format (these files contain - cil+metadata+bootstrap for clr)
+		↓
+clr is started finds main() in the code and uses jit to compile cil and convert it to machine code
+		↓
+the machine code is executed by cpu
+_______________________________________________________________________________________________________

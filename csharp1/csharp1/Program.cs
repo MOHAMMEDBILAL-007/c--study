@@ -10,7 +10,9 @@ namespace csharp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
+            Console.WriteLine("Hello bro");
+            Console.Write("you are here too, ");
+            Console.WriteLine("yo whats up");
             Console.ReadLine();
         }
     }
