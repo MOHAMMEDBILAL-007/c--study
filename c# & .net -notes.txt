@@ -47,3 +47,16 @@ clr is started finds main() in the code and uses jit to compile cil and convert 
 		↓
 the machine code is executed by cpu
 _______________________________________________________________________________________________________
+basic c# structure
+
+namespace csharp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+        }
+    }
+}
+
